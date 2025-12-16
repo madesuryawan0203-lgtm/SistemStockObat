@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Manajemen Stok Obat</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background-color: #1976d2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1976d2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e3f2fd;
+        }
+
+        input, button {
+            padding: 8px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #ddd;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sistem Pengelolaan Stok Obat</h1>
+    <p>Login Role Apoteker & Admin</p>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div class="card">
+        <h2>Login Pengguna</h2>
+        <label>Username</label>
+        <input type="text" placeholder="Masukkan username">
+
+        <label>Password</label>
+        <input type="password" placeholder="Masukkan password">
+
+        <label>Role</label><br>
+        <input type="radio" name="role"> Apoteker<br>
+        <input type="radio" name="role"> Admin<br><br>
+
+        <button>Login</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="card">
+        <h2>Dashboard Monitoring Stok</h2>
+        <table>
+            <tr>
+                <th>Nama Obat</th>
+                <th>Stok Saat Ini</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Paracetamol</td>
+                <td>50</td>
+                <td>Aman</td>
+            </tr>
+            <tr>
+                <td>Amoxicillin</td>
+                <td>15</td>
+                <td class="warning">Menipis</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- PENCATATAN STOK -->
+    <div class="card">
+        <h2>Pencatatan Stok (Terintegrasi EMR)</h2>
+        <p>
+            Sistem mencatat setiap penggunaan obat dari EMR secara otomatis
+            sehingga data stok selalu real-time tanpa input manual.
+        </p>
+        <ul>
+            <li>Stok masuk dari pengadaan</li>
+            <li>Stok keluar dari resep pasien</li>
+        </ul>
+    </div>
+
+    <!-- AI FORECASTING -->
+    <div class="card">
+        <h2>Prediksi Kebutuhan Obat (AI Forecasting)</h2>
+        <p>Prediksi kebutuhan Paracetamol:</p>
+        <ul>
+            <li>7 Hari: 30 unit</li>
+            <li>30 Hari: 120 unit</li>
+            <li>90 Hari: 360 unit</li>
+        </ul>
+        <p>
+            Sistem menganalisis riwayat penggunaan obat untuk mencegah
+            <strong>stock-out</strong> dan <strong>overstock</strong>.
+        </p>
+    </div>
+
+    <!-- REKOMENDASI -->
+    <div class="card">
+        <h2>Rekomendasi & Notifikasi Pengadaan</h2>
+        <p class="warning">
+            ⚠ Stok Amoxicillin berada di bawah batas minimum.
+        </p>
+        <p>
+            Rekomendasi : lakukan pembelian <strong>100 unit</strong>
+            untuk menjaga ketersediaan obat.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 Sistem Manajemen Stok Obat</p>
+</footer>
+
+</body>
+</html>
